@@ -5,8 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SelfStudie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="TodoLou" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel>
+            <Menu DockPanel.Dock="Top" Background="#b3d4da">
+                <MenuItem Header="File" BorderBrush="#59504d"></MenuItem>
+            </Menu>
+            <Menu DockPanel.Dock="Bottom"  Background="#b3d4da">
+                <MenuItem Header="Add Todo" BorderBrush="#59504d" Name="AddTodo" Click="AddTodo_Click"></MenuItem>
+            </Menu>
+            <Grid Background="#ccdfe4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0" Name="LeftRow">
+                        <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="#59504d" BorderThickness="1">
+                        <StackPanel x:Name="DatePanel">
+
+                        </StackPanel>
+                    </Border>
+                </Grid>
+                <Grid Grid.Column="1" Name="MiddleRow">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="#59504d" BorderThickness="1">
+                        <StackPanel x:Name="Inputpanel">
+                            
+                        </StackPanel>
+
+                    </Border>
+                </Grid>
+                <Grid Grid.Column="2" Name="RightRow">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Border BorderBrush="#59504d" BorderThickness="1">
+                        <StackPanel x:Name="UpdatePanel">
+
+                        </StackPanel>
+                    </Border>
+                </Grid>
+            </Grid>
+        </DockPanel>
     </Grid>
 </Window>

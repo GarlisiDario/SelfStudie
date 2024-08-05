@@ -24,5 +24,10 @@ namespace SelfStudie
         {
             InitializeComponent();
         }
+
+        private void AddTodo_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
